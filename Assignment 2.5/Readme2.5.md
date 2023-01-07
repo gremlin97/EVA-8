@@ -30,6 +30,8 @@ transform: Dataset Transform
 
 ## Model Architecture
 
+* Architecture of the Model to Predict MNIST Digit and the sum between a random number for each image and its digit.
+
 ![Model Architecture](https://github.com/gremlin97/EVA-8/blob/main/Assignment%202.5/251.png)
 
 Two branches are created to predict both the MNIST Digit and the sum of the label and random number.The first branch applies a 
@@ -38,6 +40,8 @@ are extracted from the images. The other branch accepts a random number from the
 linear layers till we obtain logits in a flattened array of size 128. The first branch is continued through linear layers and an output of
 size 10 is obtained which corresponds to the output size. In the second branch the logits of size 128 are concatenated with the 128 
 logits/features and passed though another layer to obtain a class output of 18 neurons (max sum of the output of sum and label)
+
+* Architecture of the Model to Predict MNIST Digit as a Sanity Check:
 
 ![CNN Architecture](https://github.com/gremlin97/EVA-8/blob/main/Assignment%202.5/252.png)
 
