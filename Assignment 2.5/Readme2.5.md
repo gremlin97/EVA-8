@@ -29,12 +29,17 @@ transform: Dataset Transform
 
 
 ## Model Architecture
+
+![Model Architecture](https://github.com/gremlin97/EVA-8/blob/main/Assignment%202.5/251.png)
+
 Two branches are created to predict both the MNIST Digit and the sum of the label and random number.The first branch applies a 
 convolutional  block till a receptive field of 14 is reached (>11), those features are flattened to a size of 128, and relevant features 
 are extracted from the images. The other branch accepts a random number from the batch in the forward function, is passed through a set of
 linear layers till we obtain logits in a flattened array of size 128. The first branch is continued through linear layers and an output of
 size 10 is obtained which corresponds to the output size. In the second branch the logits of size 128 are concatenated with the 128 
 logits/features and passed though another layer to obtain a class output of 18 neurons (max sum of the output of sum and label)
+
+![CNN Architecture](https://github.com/gremlin97/EVA-8/blob/main/Assignment%202.5/251.png)
 
 #### Attributes:
 * random: Random number for the image in the batch
@@ -68,15 +73,15 @@ logits/features and passed though another layer to obtain a class output of 18 n
     Epoch: 8 Total Correct Sum: 49490 Total Correct Images: 59954 Total Loss: 2402.9007057838 Sum Accuracy: 0.8248333333333333 Image Accuracy: 0.9992333333333333
     Epoch: 9 Total Correct Sum: 49688 Total Correct Images: 59966 Total Loss: 2379.673212336805 Sum Accuracy: 0.8281333333333334 Image Accuracy:0.9994333333333333
     Epoch: 10 Total Correct Sum: 50180 Total Correct Images: 59978 Total Loss: 2313.3469033602573 Sum Accuracy: 0.8363333333333334 Image Accuracy: 0.999633333333333
-  Epoch: 11 Total Correct Sum: 50451 Total Correct Images: 59977 Total Loss: 2283.1148818198567 Sum Accuracy: 0.84085 Image Accuracy: 0.9996166666666667
-  Epoch: 12 Total Correct Sum: 50449 Total Correct Images: 59977 Total Loss: 2282.096609179364 Sum Accuracy: 0.8408166666666667 Image Accuracy:0.9996166666667
-  Epoch: 13 Total Correct Sum: 50437 Total Correct Images: 59977 Total Loss: 2281.1828584418395 Sum Accuracy: 0.8406166666666667 Image Accuracy:0.9996166666667
-  Epoch: 14 Total Correct Sum: 50468 Total Correct Images: 59978 Total Loss: 2252.2314270460797 Sum Accuracy: 0.8411333333333333 Image Accuracy:0.999633333334
-  Epoch: 15 Total Correct Sum: 50555 Total Correct Images: 59979 Total Loss: 2290.658310729588 Sum Accuracy: 0.8425833333333334 Image Accuracy:0.99965
-  Epoch: 16 Total Correct Sum: 50519 Total Correct Images: 59979 Total Loss: 2260.247196971777 Sum Accuracy: 0.8419833333333333 Image Accuracy:0.99965
-  Epoch: 17 Total Correct Sum: 50514 Total Correct Images: 59979 Total Loss: 2277.3647829075217 Sum Accuracy: 0.8419 Image Accuracy:0.99965
-  Epoch: 18 Total Correct Sum: 50654 Total Correct Images: 59979 Total Loss: 2248.957679862456 Sum Accuracy: 0.8442333333333333 Image Accuracy:0.99965
-  Epoch: 19 Total Correct Sum: 50572 Total Correct Images: 59979 Total Loss: 2250.7952094561547 Sum Accuracy: 0.8428666666666667 Image Accuracy:0.99965
+    Epoch: 11 Total Correct Sum: 50451 Total Correct Images: 59977 Total Loss: 2283.1148818198567 Sum Accuracy: 0.84085 Image Accuracy: 0.9996166666666667
+    Epoch: 12 Total Correct Sum: 50449 Total Correct Images: 59977 Total Loss: 2282.096609179364 Sum Accuracy: 0.8408166666666667 Image Accuracy:0.9996166666667
+    Epoch: 13 Total Correct Sum: 50437 Total Correct Images: 59977 Total Loss: 2281.1828584418395 Sum Accuracy: 0.8406166666666667 Image Accuracy:0.9996166666667
+    Epoch: 14 Total Correct Sum: 50468 Total Correct Images: 59978 Total Loss: 2252.2314270460797 Sum Accuracy: 0.8411333333333333 Image Accuracy:0.999633333334
+    Epoch: 15 Total Correct Sum: 50555 Total Correct Images: 59979 Total Loss: 2290.658310729588 Sum Accuracy: 0.8425833333333334 Image Accuracy:0.99965
+    Epoch: 16 Total Correct Sum: 50519 Total Correct Images: 59979 Total Loss: 2260.247196971777 Sum Accuracy: 0.8419833333333333 Image Accuracy:0.99965
+    Epoch: 17 Total Correct Sum: 50514 Total Correct Images: 59979 Total Loss: 2277.3647829075217 Sum Accuracy: 0.8419 Image Accuracy:0.99965
+    Epoch: 18 Total Correct Sum: 50654 Total Correct Images: 59979 Total Loss: 2248.957679862456 Sum Accuracy: 0.8442333333333333 Image Accuracy:0.99965
+    Epoch: 19 Total Correct Sum: 50572 Total Correct Images: 59979 Total Loss: 2250.7952094561547 Sum Accuracy: 0.8428666666666667 Image Accuracy:0.99965
 
     Epoch: 0 Total Correct: 25197 Total Correct Images: 58230 Loss: 1.0580025911331177 Sum Accuracy: 0.41995 Image Accuracy: 0.9705
     Epoch: 1 Total Correct: 34460 Total Correct Images: 59254 Loss: 1.1102770864963531 Sum Accuracy: 0.5743333333333334 Image Accuracy: 0.9875666666666667
