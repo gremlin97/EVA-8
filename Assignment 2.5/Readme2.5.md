@@ -131,5 +131,5 @@ logits/features and passed though another layer to obtain a class output of 18 n
     Epoch: 19 Total Correct: 50334 Total Correct Images: 59984 Loss: 0.32100466638780745 Sum Accuracy: 0.8389 Image Accuracy: 0.9997333333333334
 ```
 ### Final Results: 
-* Best Training Sum Accuracy: 84.19833333333333 %
-* Best Training Image Accuracy: 99.97333333333334 %
+* **Best Training Sum Accuracy:** 84.19833333333333 %
+* **Best Training Image Accuracy:** 99.97333333333334 %
