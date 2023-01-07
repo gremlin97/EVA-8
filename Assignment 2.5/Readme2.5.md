@@ -99,5 +99,7 @@ logits/features and passed though another layer to obtain a class output of 18 n
     Epoch: 17 Total Correct: 50283 Total Correct Images: 59984 Loss: 0.5959093793844659 Sum Accuracy: 0.83805 Image Accuracy: 0.9997333333333334
     Epoch: 18 Total Correct: 50349 Total Correct Images: 59984 Loss: 0.3229017183139149 Sum Accuracy: 0.83915 Image Accuracy: 0.9997333333333334
     Epoch: 19 Total Correct: 50334 Total Correct Images: 59984 Loss: 0.32100466638780745 Sum Accuracy: 0.8389 Image Accuracy: 0.9997333333333334
-* Final Results:
 ```
+### Final Results: 
+* Best Training Sum Accuracy: 0.8419833333333333
+* Best Training Image Accuracy: 0.9997333333333334
