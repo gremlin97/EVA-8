@@ -23,9 +23,9 @@ __item__: Returns the length of the dataset
 
 #### Arguments:
 
-dir: Working Directory
-train: (Bool) True to generate train, False to generate Test Dataset
-transform: Dataset Transform
+* dir: Working Directory
+* train: (Bool) True to generate train, False to generate Test Dataset
+* transform: Dataset Transform
 
 
 ## Model Architecture
