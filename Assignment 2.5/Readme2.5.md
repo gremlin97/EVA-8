@@ -39,7 +39,7 @@ linear layers till we obtain logits in a flattened array of size 128. The first 
 size 10 is obtained which corresponds to the output size. In the second branch the logits of size 128 are concatenated with the 128 
 logits/features and passed though another layer to obtain a class output of 18 neurons (max sum of the output of sum and label)
 
-![CNN Architecture](https://github.com/gremlin97/EVA-8/blob/main/Assignment%202.5/251.png)
+![CNN Architecture](https://github.com/gremlin97/EVA-8/blob/main/Assignment%202.5/252.png)
 
 #### Attributes:
 * random: Random number for the image in the batch
