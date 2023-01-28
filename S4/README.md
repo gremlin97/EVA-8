@@ -14,7 +14,7 @@
 
 ## Goal
 
-To train a neural network model to predict digits from 0-9 using the MNIST Digits.
+To train a neural network model to predict digits from 0-9 using the MNIST Digits Dataset.
 
 ### Constraints
 * Less than 20k params
