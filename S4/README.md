@@ -1,14 +1,14 @@
 # Part 1
 
-Goal: Backprop a Simple Neural Network using excel.
+**Goal**: Backprop a Simple Neural Network using excel.
 
-Conclusion: Decreasing the Learn rate decreases the convergence rate of the error function i.e. the decrease in error is lower across the Epochs.
+**Conclusion**: Decreasing the Learn rate decreases the convergence rate of the error function i.e. the decrease in error is lower across the Epochs.
 
 ## Screenshots
 
-![CNN Architecture](part1.png)
-![CNN Architecture](part2.png)
-![CNN Architecture](part3.png)
+![Part 1](https://github.com/gremlin97/EVA-8/blob/main/S4/part1.PNG)
+![Part 2](https://github.com/gremlin97/EVA-8/blob/main/S4/part2.PNG)
+![Part 3](https://github.com/gremlin97/EVA-8/blob/main/S4/part3.PNG)
 
 # Part 2
 
