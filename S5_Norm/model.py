@@ -3,13 +3,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
-# norm = 'GN'
 
 class Net(nn.Module):
-    def __init__(self, norm='GN', num=1):
+    def __init__(self, norm='GN', num=1, device='cuda:0'):
         super(Net, self).__init__()
         self.norm = norm
         self.num = num
+        self.device = device
         self.conv1 = nn.Conv2d(1, 16, 3, padding=0, bias=False) # RF:1+(3-1)1=3; ji=1,jo=1; 28x28x1 -> 26x26x16
         self.bn1 = nn.BatchNorm2d(16)
         self.drop1 = nn.Dropout(0.1)
@@ -37,28 +37,30 @@ class Net(nn.Module):
 
         if self.norm == 'BN':
           n_chans = x.shape[1]
-          running_mean = torch.zeros(n_chans) 
-          running_std = torch.ones(n_chans)
+          running_mean = torch.zeros(n_chans).to(self.device) 
+          running_std = torch.ones(n_chans).to(self.device)
+          print(self.device)
+          print(running_mean)
           x = F.batch_norm(x, running_mean, running_std, training=True)
           x = F.relu(self.conv3(self.drop1(x)))
           n_chans = x.shape[1]
-          running_mean = torch.zeros(n_chans) 
-          running_std = torch.ones(n_chans)
+          running_mean = torch.zeros(n_chans).to(self.device) 
+          running_std = torch.ones(n_chans).to(self.device) 
           x = F.batch_norm(x, running_mean, running_std, training=True)
           x = F.relu(self.conv5(self.drop2(self.pool2(x))))
           n_chans = x.shape[1]
-          running_mean = torch.zeros(n_chans) 
-          running_std = torch.ones(n_chans)
+          running_mean = torch.zeros(n_chans).to(self.device) 
+          running_std = torch.ones(n_chans).to(self.device) 
           x = F.batch_norm(x, running_mean, running_std, training=True)
           x = F.relu(self.conv6(x))
           n_chans = x.shape[1]
-          running_mean = torch.zeros(n_chans) 
-          running_std = torch.ones(n_chans)
+          running_mean = torch.zeros(n_chans).to(self.device)  
+          running_std = torch.ones(n_chans).to(self.device) 
           x = F.batch_norm(x, running_mean, running_std, training=True)
           x = F.relu(self.conv10(self.drop4(x)))
           n_chans = x.shape[1]
-          running_mean = torch.zeros(n_chans) 
-          running_std = torch.ones(n_chans)
+          running_mean = torch.zeros(n_chans).to(self.device)  
+          running_std = torch.ones(n_chans).to(self.device) 
           x = F.batch_norm(x, running_mean, running_std, training=True)
 
         elif self.norm == 'GN':
@@ -92,5 +94,3 @@ class Net(nn.Module):
         x = self.lin(x)
         
         return F.log_softmax(x)
-
-# model = Net(norm)
