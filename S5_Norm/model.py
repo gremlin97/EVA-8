@@ -69,14 +69,26 @@ class Net(nn.Module):
           running_std = torch.ones(n_chans).to(self.device)
           x = F.batch_norm(x, running_mean, running_std, training=True, momentum=0.9)
           x = F.relu(self.conv3(self.drop1(x)))
+          n_chans = x.shape[1]
+          running_mean = torch.zeros(n_chans).to(self.device) 
+          running_std = torch.ones(n_chans).to(self.device)
           x = F.batch_norm(x, running_mean, running_std, training=True, momentum=0.9)
           # Transition Block: Squeeze
           x = F.relu(self.conv5(self.drop2(self.pool2(x))))
+          n_chans = x.shape[1]
+          running_mean = torch.zeros(n_chans).to(self.device) 
+          running_std = torch.ones(n_chans).to(self.device)
           x = F.batch_norm(x, running_mean, running_std, training=True, momentum=0.9)
           # Transition Block: Expand
           x = F.relu(self.conv6(x))
+          n_chans = x.shape[1]
+          running_mean = torch.zeros(n_chans).to(self.device) 
+          running_std = torch.ones(n_chans).to(self.device)
           x = F.batch_norm(x, running_mean, running_std, training=True, momentum=0.9)
           x = F.relu(self.conv10(self.drop4(x)))
+          n_chans = x.shape[1]
+          running_mean = torch.zeros(n_chans).to(self.device) 
+          running_std = torch.ones(n_chans).to(self.device)
           x = F.batch_norm(x, running_mean, running_std, training=True, momentum=0.9)
 
         elif self.norm == 'GN':
