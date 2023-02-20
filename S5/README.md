@@ -68,4 +68,20 @@ Readded padding=1 back to convolutions to reduce the rapid decrease in feature m
 
 Difference between training and test accuracy reduces substantially. Testing accuracy is more consistent in the last epochs. Training accuracy increases faster in a linear fashion along with test accuracy. Model params are reduced below 8k.
 
-**Colab Link:** https://colab.research.google.com/github/gremlin97/EVA-8/blob/main/S5/Eva3_Step3.ipynb
+## Step 4
+
+**Target:**
+
+Added Squeeze and Expand Architecture with a transition layer in between.
+
+**Results:**
+
+* Parameters: 11,470
+* Best Train Accuracy: 99.23
+* Best Test Accuracy: 99.38
+
+**Analysis:**
+
+Squeeze and Expand causes mix and merge of channel resulting in fast and large increase in accuracy.
+
+**Colab Link:** https://colab.research.google.com/github/gremlin97/EVA-8/blob/main/S5/Eva3_Step4.ipynb
