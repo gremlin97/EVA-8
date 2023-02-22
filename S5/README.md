@@ -13,7 +13,14 @@ To train a neural network model to predict digits from 0-9 using the MNIST Digit
 * Max Accuracy of 99.20% achieved on the test data
 * 7,386 Parameters
 
+## Final Results After Step 4 
+
+* Parameters: 11,470
+* Best Train Accuracy: 99.23
+* Best Test Accuracy: 99.38
+
 ## Final Results After Step 3
+
 * Parameters: 7,386
 * Best Train Accuracy: 99.07
 * Best Test Accuracy: 99.20
