@@ -3,6 +3,55 @@
 * Create a simplified and well organized folder/file structure to host the model, utils and main driver code files seperately and import it for use in the colab file.
 * Created a custom-optimized fast Resnet Architecture inspired by the DAWN CIFAR-10 Benchmark winner. Achieve 90% test accuracy on CIFAR-10 with a low training time using OCP and augmentations via albumentations.
 
+
+### Model Summary
+```
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 64, 32, 32]           1,792
+              ReLU-2           [-1, 64, 32, 32]               0
+       BatchNorm2d-3           [-1, 64, 32, 32]             128
+            Conv2d-4          [-1, 128, 32, 32]          73,856
+         MaxPool2d-5          [-1, 128, 16, 16]               0
+              ReLU-6          [-1, 128, 16, 16]               0
+       BatchNorm2d-7          [-1, 128, 16, 16]             256
+            Conv2d-8          [-1, 128, 16, 16]         147,584
+              ReLU-9          [-1, 128, 16, 16]               0
+      BatchNorm2d-10          [-1, 128, 16, 16]             256
+           Conv2d-11          [-1, 128, 16, 16]         147,584
+             ReLU-12          [-1, 128, 16, 16]               0
+      BatchNorm2d-13          [-1, 128, 16, 16]             256
+           Conv2d-14          [-1, 256, 16, 16]         295,168
+        MaxPool2d-15            [-1, 256, 8, 8]               0
+             ReLU-16            [-1, 256, 8, 8]               0
+      BatchNorm2d-17            [-1, 256, 8, 8]             512
+           Conv2d-18            [-1, 512, 8, 8]       1,180,160
+        MaxPool2d-19            [-1, 512, 4, 4]               0
+             ReLU-20            [-1, 512, 4, 4]               0
+      BatchNorm2d-21            [-1, 512, 4, 4]           1,024
+          Dropout-22            [-1, 512, 4, 4]               0
+           Conv2d-23            [-1, 512, 4, 4]       2,359,808
+             ReLU-24            [-1, 512, 4, 4]               0
+      BatchNorm2d-25            [-1, 512, 4, 4]           1,024
+           Conv2d-26            [-1, 512, 4, 4]       2,359,808
+             ReLU-27            [-1, 512, 4, 4]               0
+      BatchNorm2d-28            [-1, 512, 4, 4]           1,024
+        MaxPool2d-29            [-1, 512, 1, 1]               0
+           Linear-30                   [-1, 10]           5,130
+          Softmax-31                   [-1, 10]               0
+================================================================
+Total params: 6,575,370
+Trainable params: 6,575,370
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.01
+Forward/backward pass size (MB): 6.50
+Params size (MB): 25.08
+Estimated Total Size (MB): 31.60
+----------------------------------------------------------------
+```
+
 ### Training Logs:
 ```
     Accuracy is: 37.122
