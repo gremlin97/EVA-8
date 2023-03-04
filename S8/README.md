@@ -207,6 +207,7 @@ Estimated Total Size (MB): 31.60
 
 ```
 Accuracy of the network on the 10000 test images: 87 %
+Achieved a max/best accuracy of 88 % on the test images
 ```
 
 ### One Cycle Policy Details
