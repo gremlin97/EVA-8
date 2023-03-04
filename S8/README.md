@@ -129,3 +129,8 @@ Estimated Total Size (MB): 31.60
     Finished Training
     Accuracy of the model on the 10000 test images: 87 %
 ```
+### Test Accuracy on Test Dataloader (10k Images)
+
+```
+Accuracy of the network on the 10000 test images: 87 %
+```
