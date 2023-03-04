@@ -137,6 +137,8 @@ Accuracy of the network on the 10000 test images: 87 %
 
 ### One Cycle Policy Details
 
+![LR](https://github.com/gremlin97/EVA-8/blob/main/S8/lr.PNG)
+
 ***Max LR:*** 0.1552225357427048
 
 ```
