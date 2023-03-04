@@ -157,7 +157,7 @@ scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer,
 ### Augmentation Strategy:
 * Cutout 8x8
 * Random Crop:32x32
-* Horizontal Flip: probablity=>0.5
+* Horizontal Flip: probablity~0.5
 
 ### Link to Utils Folder (Contains Utility Files, Model Files and other supporting driver code)
 https://github.com/gremlin97/EVA-Utils
