@@ -134,3 +134,28 @@ Estimated Total Size (MB): 31.60
 ```
 Accuracy of the network on the 10000 test images: 87 %
 ```
+
+### One Cycle Policy Details
+
+***Max LR:*** 0.1552225357427048
+
+```
+scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer, 
+                                                max_lr=ler_rate,
+                                                steps_per_epoch=len(trainloader), 
+                                                epochs=24,
+                                                pct_start=0.2,
+                                                div_factor=10,
+                                                three_phase=False, 
+                                                final_div_factor=100,
+                                                anneal_strategy='linear'
+                                                ) 
+```
+
+### Augmentation Strategy:
+* Cutout 8x8
+* Random Crop:32x32
+* Horizontal Flip: probablity=>0.5
+
+### Link to Utils Folder (Contains Utility Files, Model Files and other supporting driver code)
+https://github.com/gremlin97/EVA-Utils
