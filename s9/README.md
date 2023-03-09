@@ -216,5 +216,9 @@ Accuracy of the model on the 10000 test images: 41 %
 Achieved a max/best accuracy of 47.7 % on the test images
 ```
 
+### Model Loss
+
+![Loss](https://github.com/gremlin97/EVA-8/blob/main/s9/images/loss.png)
+
 ### Link to Utils Folder (Contains Utility Files, Model Files and other supporting driver code)
 https://github.com/gremlin97/EVA-Utils
