@@ -170,4 +170,4 @@ ViT: Epoch: 24 | Train Acc: 0.6232, Test Acc: 0.6506, Time: 65.1, lr: 0.000000
 </p>
 
 ## Further Resources
-* The implementation folder consists of the implementations of ConvMixer and Attention calculation using Numpy!
+* The [Implementation](https://github.com/gremlin97/EVA-8/tree/main/S10/Implementations) folder consists of the implementations of ConvMixer and Attention calculation using Numpy!
