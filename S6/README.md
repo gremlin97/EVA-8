@@ -102,3 +102,52 @@ AdaptiveAvgPool2d-26             [-1, 32, 1, 1]               0
 ```
 75%
 ```
+
+## Transformations using Albumentations
+
+```
+train_transform = A.Compose([
+    A.HorizontalFlip(p=0.5),
+    A.ShiftScaleRotate(p=0.5),
+    A.CoarseDropout(max_holes = 1, max_height=16, max_width=16, min_height=16, min_width=16, min_holes = 1, fill_value=-1.69, mask_fill_value = None),
+    A.Normalize(
+        mean=[0.5, 0.5, 0.5],
+        std=[0.5, 0.5, 0.5],
+    ),
+    ToTensorV2()
+])
+
+test_transform = A.Compose([
+    # A.HorizontalFlip(p=0.5),
+    # A.ShiftScaleRotate(p=0.5),
+    # A.CoarseDropout(max_holes = 1, max_height=16, max_width=16, min_height=16, min_width=16, min_holes = 1, fill_value=-1.69, mask_fill_value = None),
+    A.Normalize(
+        mean=[0.5, 0.5, 0.5],
+        std=[0.5, 0.5, 0.5],
+    ),
+    ToTensorV2()
+])
+
+class Cifar10(torchvision.datasets.CIFAR10):
+    def __init__(self, root="~/data/cifar10", train=True, download=True, transform=None):
+        super().__init__(root=root, train=train, download=download, transform=transform)
+
+    def __getitem__(self, index):
+        image, label = self.data[index], self.targets[index]
+
+        if self.transform is not None:
+            transformed = self.transform(image=image)
+            image = transformed["image"]
+
+        return image, label
+
+trainset = Cifar10(root='./data', train=True,download=True, transform=train_transform)
+testset = Cifar10(root='./data', train=False,download=True, transform=test_transform)
+
+trainloader = torch.utils.data.DataLoader(trainset,batch_size = 4, shuffle=True)
+testloader = torch.utils.data.DataLoader(testset,batch_size = 4, shuffle=True)
+
+classes = ('plane', 'car', 'bird', 'cat',
+           'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+
+```
