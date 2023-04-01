@@ -157,14 +157,17 @@ ViT: Epoch: 24 | Train Acc: 0.6232, Test Acc: 0.6506, Time: 65.1, lr: 0.000000
 #### GradCAM Outputs for Misclassified Images (For their actual corresponding class)
 
 <p float="left">
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/1g.png" width="200" />
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/2g.png" width="200" /> 
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/3g.png" width="200" />
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/4g.png" width="200" />
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/5g.png" width="200" /> 
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/6g.png" width="200" />
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/7g.png" width="200" />
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/8g.png" width="200" /> 
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/9g.png" width="200" />
-  <img src="https://github.com/gremlin97/EVA-8/blob/main/S7/images/10g.png" width="200" />
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/1.png" width="200" />
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/2.png" width="200" /> 
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/3.png" width="200" />
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/4.png" width="200" />
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/5.png" width="200" /> 
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/6.png" width="200" />
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/7.png" width="200" />
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/8.png" width="200" />
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/9.png" width="200" /> 
+  <img src="https://github.com/gremlin97/EVA-8/blob/main/S10/Images/10.png" width="200" />
 </p>
+
+## Further Resources
+* The implementation folder consists of the implementations of ConvMixer and Attention calculation using Numpy!
